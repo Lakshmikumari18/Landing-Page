@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    font-family: sans-serif;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar.sticky{         /* upr jaane pr */
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{ 
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: sans-serif;
+
+}
+
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar.sticky .logo a span{ /* neeche jaane pr */
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #f5a171;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+    cursor: pointer;
+}
+
+.navbar.sticky .menu li a:hover{ 
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+.navbar .max-width img{
+    width: 180px;
+    height: 80px;
+}
+
+/* Home section Styling */
+.home{
+    display: flex;
+    background:url(watch.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: sans-serif;
+
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+.home .max-width .home-content .connect svg a{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+    fill: #dbd8d6;
+}
+
+.home .max-width .home-content .connect svg a:hover{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+    fill: #5c26da;
+}
+/* all similar content styling code */
+section {
+    padding: 100px 0;
+}
+
+.about, .services, .skills, .contact, .certifications, .footer{
+    font-family: 'Poppins',sans-serif;
+}
+.about .about-content, .services .services-content, .skills .skills-content, 
+.certifications .certifications-content  ,.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section .title::before{   /* ------ */
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);            /* center me le aaya */
+}
+section .title::after{   /*  about me title ke neeche aa jaayega, line ke beech me */
+
+    position: absolute;
+    bottom: -8px;       /* beech me aayega */
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+              
+}
+
+/* About section Styling */
+
+
+.about .title::after{
+    content: "who i am";
+}
+
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .connect svg a{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+    fill: #a3a3a3;
+}
+.about .about-content .connect svg a:hover{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+    fill: #6d36ec;
+}
+/* Services section Styling */
+.services svg{
+    width: 50px;
+    height: 50px;
+    fill: crimson;
+}
+.services {
+    color: #111;
+    background: #fff;
+
+}
+
+.services .title::before{
+    background: #121212;
+
+}
+.services .title::after{
+    background: #fff;
+    content: "what i provide";
+
+}
+
+.services .services-content .card{
+    width: 360px;
+    text-align: center;
+    background: #e0dede;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;    
+    transform: all 0.3s ease;
+}
+.services .services-content .card:hover{
+    background: #ccc8c8;
+}
+.services .services-content .card:hover svg{
+    color: #fff;
+
+}
+.services .services-content .card .box{
+    transform: all 0.3s ease;
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .services-content .card svg{
+    font-size: 50px;
+    color: #968c8e;
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .services-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.services .services-content a:hover{
+    color: crimson;
+    background: none;
+}
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: #4691f6;
+}
+  
+.svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+}
+
+/* menu btn styling*/
+svg{
+    height: 45px;
+    width: 30px;
+    cursor: pointer;
+    fill: #52c8e6;
+
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*Footer Section Styling*/
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    color: crimson;
+    text-decoration: underline;
+
+}
+
+@media(max-width: 1104px){          /* to adjust the section */
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+        
+    }
+    
+}
+@media(max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+
+    }
+}
+
+
+@media(max-width: 947px){
+    
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn svg.active.before{  
+        content: 'f00d';
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        background-color: #111;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3 ease;
+    }
+    .navbar .menu.active{
+        left: 0%;
+
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width{
+        max-width: 800px;
+       
+    }
+
+    
+    
+}
+
+@media(max-width: 690px){   /* Compress krte samay */
+    .max-width{
+        padding: 0 23px;
+
+    }
+
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+
+    .home .home-content a{
+        font-size: 20px;
+    }
+   
+}
+
+@media(max-width: 500px){  
+    
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    
+}
